@@ -15,8 +15,8 @@ export default function New({ history }) {
     return thumbnail ? URL.createObjectURL(thumbnail) : null;
   }, [thumbnail])
 
-  async function handleSubmit(event) {
-    event.preventDefault();
+  async function handleSubmit(e) {
+    e.preventDefault();
 
     const data = new FormData();
     const user_id = localStorage.getItem('user');
@@ -40,7 +40,7 @@ export default function New({ history }) {
         style={{ backgroundImage: `url(${preview})` }}
         className={thumbnail ? 'has-thumbnail' : ''}
       >
-        <input type="file" onChange={event => setThumbnail(event.target.files[0])} />
+        <input type="file" onChange={e => setThumbnail(e.target.files[0])} />
         <img src={camera} alt="Select img" />
       </label>
 
@@ -49,7 +49,7 @@ export default function New({ history }) {
         id="company"
         placeholder="Sua empresa incrível"
         value={company}
-        onChange={event => setCompany(event.target.value)}
+        onChange={e => setCompany(e.target.value)}
       />
 
       <label htmlFor="techs">TECNOLOGIAS * <span>(separadas por vírgula)</span></label>
@@ -57,7 +57,7 @@ export default function New({ history }) {
         id="techs"
         placeholder="Quais tecnologias usam?"
         value={techs}
-        onChange={event => setTechs(event.target.value)}
+        onChange={e => setTechs(e.target.value)}
       />
 
       <label htmlFor="price">VALOR DA DIÁRIA * <span>(em branco para GRATUITO)</span></label>
@@ -65,7 +65,7 @@ export default function New({ history }) {
         id="price"
         placeholder="Valor cobrado por dia"
         value={price}
-        onChange={event => setPrice(event.target.value)}
+        onChange={e => setPrice(e.target.value)}
       />
 
       <button type="submit" className="btn">Cadastrar</button>
