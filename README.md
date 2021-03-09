@@ -5,8 +5,8 @@
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361"/>
 
-  <a href="https://github.com/tiagoalmeidz/airbnb">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/tiagoalmeidz/airbnb?style=social"/>
+  <a href="https://github.com/tiagoalmeidz/Airbnb-Clone">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/tiagoalmeidz/Airbnb-Clone?style=social"/>
   </a>
 </p>
 
